@@ -187,20 +187,16 @@ function initProductsSwitch() {
     const productsItems = document.querySelectorAll('.products__item');
     
     productsItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Если кликнули на уже большой блок, ничего не делаем
+        item.addEventListener('mouseenter', function() {
             if (this.classList.contains('products__item--large')) {
                 return;
             }
             
-            // Находим текущий большой блок
             const currentLarge = document.querySelector('.products__item--large');
             
-            // Делаем текущий большой блок маленьким
             currentLarge.classList.remove('products__item--large');
             currentLarge.classList.add('products__item--small');
             
-            // Делаем кликнутый блок большим
             this.classList.remove('products__item--small');
             this.classList.add('products__item--large');
         });
