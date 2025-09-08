@@ -776,12 +776,13 @@ body::before {
 }
 
 @media (max-width: 1440px) {
-  .products__item--large {
-    width: 70%;
+
+  .products__item--small{
+    width: 200px;
   }
 
-  .products__item--small {
-    width: 40%;
+  .products__item--large{
+    width: 500px;
   }
 
   .products__grid {
@@ -840,6 +841,22 @@ body::before {
   align-items: center;
   gap: 40px;
   justify-content: center;
+}
+
+.products__download:hover{
+  background: #d15d04;
+}
+
+.quiz__content {
+  position: relative;
+}
+
+.quiz__content .icon{
+  position: absolute;
+  top: -50px;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 @media (max-width: 768px) {
@@ -908,7 +925,6 @@ body::before {
 .quiz {
   color: #fff;
   position: relative;
-  overflow: hidden;
 }
 
 .quiz__content {
